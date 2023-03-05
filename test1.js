@@ -1,5 +1,5 @@
-function hello(name) {
-    console.log(`Hello, ${name}!`);
-}
-hello('noisywhitecat');
-console.log('sdad');
+const add = (a, b) => {
+    return a + b;
+};
+
+console.log(add(1, 2));
