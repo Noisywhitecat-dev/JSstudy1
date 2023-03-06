@@ -1,20 +1,33 @@
-const ironMan = {
-    name: '토니 스타크',
-    actor: '로버트 다우니 주니어',
-    alias: '아이언맨'
+const numbers = {
+    _a: 1,
+    _b: 2,
+    sum: 3,
+    calculate() {
+        console.log('calculate');
+        this.sum = this._a +this._b;
+    },
+    get a() {
+        return this._a;
+    },
+    get b() {
+        return this._b;
+    },
+    set a(value) {
+        console.log('a가 바뀝니다.');
+        this._a = value;
+        this.calculate();
+    },
+    set b(value) {
+        console.log('b가 바뀝니다.');
+        this._b = value;
+        this.calculate();
+    }
 };
 
-const captainAmerica = {
-    name: '스티븐 로저스',
-    actor: '크리스 에반스',
-    alias: '캡틴 아메리카'
-};
-
-function print(hero) {
-    const { alias, name, actor } = hero;
-    const text = `${alias}(${name}) 역할을 맡은 배우는 ${actor} 입니다.`;
-    console.log(text);
-}
-
-print(ironMan);
-print(captainAmerica);
+console.log(numbers.sum);
+numbers.a = 5;
+numbers.b = 7;
+numbers.a = 9;
+console.log(numbers.sum);
+console.log(numbers.sum);
+console.log(numbers.sum);
