@@ -1,33 +1,25 @@
-const numbers = {
-    _a: 1,
-    _b: 2,
-    sum: 3,
-    calculate() {
-        console.log('calculate');
-        this.sum = this._a +this._b;
+const todos = [
+    {
+        id: 1,
+        text: '자바스크립트 입문',
+        done: true
     },
-    get a() {
-        return this._a;
+    {
+        id: 2,
+        text: '함수 배우기',
+        done: true
     },
-    get b() {
-        return this._b;
+    {
+        id: 3,
+        text: '객체와 배열 배우기',
+        done: true
     },
-    set a(value) {
-        console.log('a가 바뀝니다.');
-        this._a = value;
-        this.calculate();
-    },
-    set b(value) {
-        console.log('b가 바뀝니다.');
-        this._b = value;
-        this.calculate();
+    {
+        id: 4,
+        text: '배열 내장함수 배우기',
+        done: false
     }
-};
+];
 
-console.log(numbers.sum);
-numbers.a = 5;
-numbers.b = 7;
-numbers.a = 9;
-console.log(numbers.sum);
-console.log(numbers.sum);
-console.log(numbers.sum);
+const index = todos.find(todo => todo.id === 3);
+console.log(index);
